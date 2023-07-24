@@ -24,6 +24,7 @@ array(
   'thumbnail', // featured images
   'revisions', // post revisions
   'post-formats', // post formats
+  'excerpt' 
   ),
   'labels' => array(
   'name' => __('Alias', 'plural'),
