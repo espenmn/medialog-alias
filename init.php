@@ -24,8 +24,9 @@ array(
   'thumbnail', // featured images
   'revisions', // post revisions
   'post-formats', // post formats
-  'excerpt' 
+  'excerpt' // read more Text
   ),
+  'taxonomies' => array('category', 'post_tag'), // support tags and category
   'labels' => array(
   'name' => __('Alias', 'plural'),
   'singular_name' => __('Alias', 'singular'),
