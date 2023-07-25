@@ -13,6 +13,27 @@
  * @package           medialog-alias
  *
  */
+
+
+
+
+ // function wpse_226690_admin_menu() {
+ //     add_menu_page(
+ //         'Lenker',
+ //         'Lenker',
+ //         'read',
+ //         'alias-menu',
+ //         '', // Callback, leave empty
+ //         'dashicons-globe',
+ //         1 // Position
+ //     );
+ // }
+ //
+ // add_action( 'admin_menu', 'wpse_226690_admin_menu' );
+
+
+
+
 /* Custom Post Type Start */
 function create_posttype() {
 register_post_type( 'alias',
@@ -26,20 +47,22 @@ array(
   'post-formats', // post formats
   'excerpt' // read more Text
   ),
+  //'show_in_menu' => 'alias-menu',
+  'show_in_menu' => 'edit.php?post_type=page',
   'taxonomies' => array('category', 'post_tag'), // support tags and category
   'labels' => array(
-  'name' => __('Alias', 'plural'),
-  'singular_name' => __('Alias', 'singular'),
-  'menu_name' => __('Alias', 'admin menu'),
-  'name_admin_bar' => _x('Alias', 'admin bar'),
-  'add_new' => __('Add New', 'add new'),
-  'add_new_item' => __('Add New Alias'),
-  'new_item' => __('New Alias'),
-  'edit_item' => __('Edit Alias'),
-  'view_item' => __('View Alias'),
-  'all_items' => __('All Aliases'),
-  'search_items' => __('Search for alias'),
-  'not_found' => __('No Aliases found.'),
+  'name' => __('link', 'medialog-alias'),
+  'singular_name' => __('Link', 'medialog-alias'),
+  'menu_name' => __('Link', 'medialog-alias'),
+  'name_admin_bar' => __('Links', 'medialog-alias'),
+  'add_new' => __('Add New Link', 'medialog-alias'),
+  'add_new_item' => __('Add New Link', 'medialog-alias'),
+  'new_item' => __('New Links', 'medialog-alias'),
+  'edit_item' => __('Edit Link', 'medialog-alias'),
+  'view_item' => __('View Link', 'medialog-alias'),
+  'all_items' => __('All Links', 'medialog-alias'),
+  'search_items' => __('Search for Links', 'medialog-alias'),
+  'not_found' => __('No Links found.', 'medialog-alias'),
   ),
   'public' => true,
   'has_archive' => false,
@@ -50,6 +73,63 @@ array(
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
 /* Custom Post Type End */
+
+
+
+
+
+//
+//
+// function xcreate_posttype() {
+// register_post_type( 'alias2',
+// // CPT Options
+// array(
+//   'supports' => array(
+//   'title', // post title
+//   'author', // post author
+//   'thumbnail', // featured images
+//   'revisions', // post revisions
+//   'post-formats', // post formats
+//   'excerpt' // read more Text
+//   ),
+//   'show_in_menu' => 'alias-menu',
+//   'show_in_admin_bar' => 'alias',
+//   'show_ui' => true,
+//   'taxonomies' => array('category', 'post_tag'), // support tags and category
+//   'labels' => array(
+//   'name' => __('Alias2', 'plurals'),
+//   'singular_name' => __('Alias2', 'singularx'),
+//   'add_new' => __('Add New Alias 2', 'add newx'),
+//   'add_new_item' => __('Add New Alias2'),
+//   'new_item' => __('New Alias2'),
+//   'edit_item' => __('Edit Alias2'),
+//   'view_item' => __('View Alias2'),
+//   'all_items' => __('All Aliases2'),
+//   'search_items' => __('Search for alias'),
+//   'not_found' => __('No Aliases found.'),
+//   ),
+//   'public' => true,
+//   'has_archive' => false,
+//   'rewrite' => array('slug' => 'alias2'),
+//  )
+// );
+// }
+// // Hooking up our function to theme setup
+// add_action( 'init', 'xcreate_posttype', $priority=7 );
+// /* Custom Post Type End */
+//
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function external_url_meta_box() {
