@@ -50,6 +50,7 @@ array(
   //'show_in_menu' => 'edit.php?post_type=page',
   'taxonomies' => array('category', 'post_tag'), // support tags and category
   'menu_icon' => 'dashicons-admin-links',
+  'menu_position' => 20,
   'labels' => array(
   'name' => __('link', 'medialog-alias'),
   'singular_name' => __('Link', 'medialog-alias'),
