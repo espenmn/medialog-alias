@@ -47,9 +47,9 @@ array(
   'post-formats', // post formats
   'excerpt' // read more Text
   ),
-  //'show_in_menu' => 'alias-menu',
-  'show_in_menu' => 'edit.php?post_type=page',
+  //'show_in_menu' => 'edit.php?post_type=page',
   'taxonomies' => array('category', 'post_tag'), // support tags and category
+  'menu_icon' => 'dashicons-admin-links',
   'labels' => array(
   'name' => __('link', 'medialog-alias'),
   'singular_name' => __('Link', 'medialog-alias'),
@@ -73,63 +73,6 @@ array(
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
 /* Custom Post Type End */
-
-
-
-
-
-//
-//
-// function xcreate_posttype() {
-// register_post_type( 'alias2',
-// // CPT Options
-// array(
-//   'supports' => array(
-//   'title', // post title
-//   'author', // post author
-//   'thumbnail', // featured images
-//   'revisions', // post revisions
-//   'post-formats', // post formats
-//   'excerpt' // read more Text
-//   ),
-//   'show_in_menu' => 'alias-menu',
-//   'show_in_admin_bar' => 'alias',
-//   'show_ui' => true,
-//   'taxonomies' => array('category', 'post_tag'), // support tags and category
-//   'labels' => array(
-//   'name' => __('Alias2', 'plurals'),
-//   'singular_name' => __('Alias2', 'singularx'),
-//   'add_new' => __('Add New Alias 2', 'add newx'),
-//   'add_new_item' => __('Add New Alias2'),
-//   'new_item' => __('New Alias2'),
-//   'edit_item' => __('Edit Alias2'),
-//   'view_item' => __('View Alias2'),
-//   'all_items' => __('All Aliases2'),
-//   'search_items' => __('Search for alias'),
-//   'not_found' => __('No Aliases found.'),
-//   ),
-//   'public' => true,
-//   'has_archive' => false,
-//   'rewrite' => array('slug' => 'alias2'),
-//  )
-// );
-// }
-// // Hooking up our function to theme setup
-// add_action( 'init', 'xcreate_posttype', $priority=7 );
-// /* Custom Post Type End */
-//
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function external_url_meta_box() {
