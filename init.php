@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Medialog Alias
- * Description:       Alias Content type for Wordpress
+ * Description:       Alias /Link Content type for Wordpress
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           0.1.0
@@ -17,7 +17,7 @@
 
 
 
- // function wpse_226690_admin_menu() {
+ // function medialog_link_admin_menu() {
  //     add_menu_page(
  //         'Lenker',
  //         'Lenker',
@@ -29,7 +29,7 @@
  //     );
  // }
  //
- // add_action( 'admin_menu', 'wpse_226690_admin_menu' );
+ // add_action( 'admin_menu', 'medialog_link_admin_menu' );
 
 
 
